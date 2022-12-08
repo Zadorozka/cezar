@@ -1,0 +1,17 @@
+language = "абвгґдеєжзиіїйклмнопрстуфхцчищьюяабвгґдеєжзиіїйклмнопрстуфхцчищьюяabcdefghiklmnopqrstvxyzabcdefghiklmnopqrstvxyz01234567890123456789"
+while True:
+    word: str = input("ведіть слово: ")
+    key = 1
+    word_low = word.lower()
+    bio = ""
+    for letter in word_low:
+        position =language.find(letter)
+        new_position = position + key
+        if letter in language:
+            if new_position > 136:
+                new_position = new_position - 137
+        bio = bio + language[new_position]
+    else:
+      print(bio)
+      position = language.find(letter)
+      bio = bio + language[new_position]
